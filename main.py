@@ -8,7 +8,7 @@ def makeLine(programName):
     
 outFile.write('import wmi\nimport time\nf = wmi.WMI()\n')
 outFile.write('while True:\n    time.sleep({})\n    for process in f.Win32_Process():'.format(file[0][:-1]))
-print(file[1:])
+
 for line in file[1:]:
     if line[:-1] + '\n' == line:
         outFile.write(makeLine(line[:-1]))
